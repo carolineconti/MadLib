@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Getting Form Data</title>
+<script>
+function greet() {
+	// get form values
+	var name = document.getElementById('name').value;
+	var place = document.getElementById('place').value;
+	var age = document.getElementById('age').value;
+	// build message
+	message = "Hello, " + name + ". I see that you are from " + place +
+          	" and that you are " + age + " years old.";
+	// display message
+	document.getElementById('greeting').innerHTML = message;
+}
+</script>
+</head>
+<body>
+<h1>Getting Form Data with JavaScript</h1>
+<h2>Enter a value into each field:</h2>
+<form>
+What is your name? <input type="text" id='name'> <br>
+Where are you from? <input type="text" id='place'> <br>
+How old are you? <input type="number" id='age'> <br>
+<input type="button" onclick="greet()" value="Submit">
+</form>
+<p id="greeting"></p>
+</body>
+</html>

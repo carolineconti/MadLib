@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+This page makes a Mad Lib story. For an example of a similar page, go here:
+http://www.redkid.net/madlibs/
+-->
+<html>
+<head>
+<title>My MadLib</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Revalia" rel="stylesheet">
+</head>
+<body>
+<h1>My MadLib</h1>
+<div class="data">
+	<p class="instructions">Enter a value into each field. Then press 'Make Story' to read the story you made.</p>
+	<!--
+	Request that the user type in at least 15 words in the form below. Ask for the
+	words by part of speach (noun, verb, adjective, adverb, proper noun, etc.) You
+	can also ask for things like places. Use field ids like noun1, noun2, verb1, etc.
+	Then make a button with the text "Make Story". The Make Story button should call
+	your makeStory() function which gets all of the form data and then builds and
+	displays your finished story.
+	-->
+	<form>
+  	A Person You Know <input type="text" id='a_person_you_know'> <br>
+  	Adjective <input type="text" id='adjective'> <br>
+  	Exclamation <input type="text" id='exclamation'> <br>
+  	Nasty Adjective <input type="text" id='nasty_adjective'> <br>
+  	Noun <input type="text" id='noun'> <br>
+  	Part of the Body <input type="text" id='part_of_the_body'> <br>
+  	Plural Noun #1 <input type="text" id='plural_noun_1'> <br>
+  	Plural Noun #2 <input type="text" id='plural_noun_2'> <br>
+  	Plural Noun #3 <input type="text" id='plural_noun_3'> <br>
+  	Plural Noun #4 <input type="text" id='plural_noun_4'> <br>
+  	Type of Disease <input type="text" id='type_of_disease'> <br>
+  	<input type="button" onclick="makeStory()" value="Make Story">
+	</form>
+</div>
+<div class="story">
+	<h2 id="title"></h2>
+	<p id="one">Complete the form to the left to see a story.</p>
+	<p id="two"></p>
+	<p id="three"></p>
+</div>
+<!-- don't forget to link to the story_maker.js file here. -->
+ <script src="story_maker.js"></script>
+</body>
+</html>
